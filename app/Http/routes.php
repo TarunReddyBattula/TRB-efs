@@ -17,3 +17,25 @@ Route::get('/', function () {
 Route::resource('customers','CustomerController');
 Route::resource('stocks','StockController');
 Route::resource('investments','InvestmentController');
+Route::resource('fundassets','FundassetController');
+
+Route::group(['middleware' => ['web']], function(){
+    //
+});
+
+Route::group(['middleware' => 'web'], function() {
+
+
+    Route::auth();
+    Route::get('/', function () {
+        return view('welcome');
+    });
+    Route::resource('customers','CustomerController');
+    Route::resource('stocks','StockController');
+    Route::resource('investments','InvestmentController');
+    Route::resource('fundassets','FundassetController');
+
+    Route::get('/home', 'HomeController@index');
+});
+
+
