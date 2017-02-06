@@ -10,7 +10,7 @@
 
                 <div class="panel-body">
 
-                    <a href = "http://localhost/efs/public/customers"> <h3><p style="text-align:center;">Begin</p></h3> </a>
+                    <a href = "{{url('/customers')}}"> <h3><p style="text-align:center;">Begin</p></h3> </a>
                 </div>
             </div>
         </div>
